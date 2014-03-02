@@ -10,7 +10,7 @@ $(function(){
       $header   = $("header"),
       $body     = $("body"),
       $ms       = $("#measure"),
-      $wpSec    = $(".wpSec"),
+      $wpSec    = $("div.wpSec"),
       $children = $wpSec.children(),
       $wd       = $(window);
       
@@ -85,4 +85,15 @@ $(function(){
     scrollWithFade();
   
   }).on("resize", getMargin);
+  
+  
+  //* debug *//
+  /*
+  var $ms       = $("#measure");
+  function measure() {              // scrollTop および ウィンドウの高さを取得
+    $ms.html( "ScrollTop: " + $body.scrollTop() + "<br />WindowWidth: " + $wd.width() + "<br />WindowHeight: " + $wd.height() );
+  }
+  measure();
+  $wd.on("scroll resize", measure);
+  */
 });
