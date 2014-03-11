@@ -71,10 +71,17 @@ $(function(){
     $("html,body").animate({ scrollTop: 0 }, 400);
   }
   
+  function resize_for_android() {    // viewport 指定が効かない Android端末用
+    if (navigator.userAgent.indexOf('Android') > 0){
+      $("html").css("zoom" , $(window).width()/320 )
+    }
+  }
+  
   
   //* exec *//
   popHeader();
   getMargin();
+  resize_for_android();
   loadingAnimation();
   
   $("#pageTop").click(pageTop);

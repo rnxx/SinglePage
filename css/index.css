@@ -186,7 +186,7 @@ html, body {
     }
 
 /* Breakpoint for tablet */
-@media screen and (max-width: 979px) {
+@media only screen and (max-width: 980px) {
   #sec1st .wpSec, #sec2nd .wpSec {
     left: 60px;
     width: 400px;
@@ -205,19 +205,65 @@ html, body {
     }
 }
 
-/* Breakpoint for smartphone */
-@media screen and (max-width: 479px) {
+/* Breakpoint for sp */
+@media only screen and (max-width: 480px) {
   .wpSec {
     bottom: 0;
-    -webkit-transform: translate(-50%, -100%);
-    -ms-transform: translate(-50%, -100%);
-    transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: 280px !important;
   }
   #sec2nd .wpSec, #sec3rd .wpSec {
-    left: 50%;
+    left: 50%; top: 50%;
+  }
+  #sec4th .wpSec {
+    left: 50%; bottom: 25%;
   }
     .wpSec h1 {
       font-size: 4.2rem;
     }
+  
+  #sec1st {
+    background: url("../images/bg/bg01_sp.jpg") center top no-repeat;
+    background-size: cover;
+  }
+  #sec2nd {
+    background: url("../images/bg/bg02_sp.jpg") center top no-repeat;
+    background-size: cover;
+    height: 568px;
+  }
+  #sec3rd {
+    background: url("../images/bg/bg03_sp.jpg") center 4% no-repeat;
+    background-size: cover;
+    height: 568px;
+  }
+  #sec4th {
+    background: url("../images/bg/bg04_sp.jpg") center center no-repeat;
+    background-size: cover;
+    height: 568px;
+  }
+}
+
+/* Breakpoint for Retina */
+@media only screen and (max-device-width: 480px) and (-webkit-device-pixel-ratio:2) {
+  #sec1st {
+    background: url("../images/bg/bg01_sp@2x.jpg") center top no-repeat;
+    background-size: cover;
+  }
+  #sec2nd {
+    background: url("../images/bg/bg02_sp@2x.jpg") center top no-repeat;
+    background-size: cover;
+    height: 568px;
+  }
+  #sec3rd {
+    background: url("../images/bg/bg03_sp@2x.jpg") center 4% no-repeat;
+    background-size: cover;
+    height: 568px;
+  }
+  #sec4th {
+    background: url("../images/bg/bg04_sp@2x.jpg") center center no-repeat;
+    background-size: cover;
+    height: 568px;
+  }
 }
